@@ -1,0 +1,1 @@
+Logos yahan rakho: tcs.png, baroda.png, numerator.png, gec.png (square ya wide, transparent bhi chalega — white box me poora fit hota hai). Na milne par initials wala badge dikhta hai. Path js/config.js me 'logo' field me hai.

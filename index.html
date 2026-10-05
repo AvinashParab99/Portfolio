@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Avinash Parab – Python Developer &amp; Automation</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- Fixed WebGL canvas: background + folding project/shout cards -->
+  <canvas id="gl"></canvas>
+  <div id="cursor"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <a href="#top" class="logo">Avinash<em>Parab</em></a>
+
+    <nav class="header__nav">
+      <a href="#about">About</a>
+      <a href="#journey">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="menuBtn" class="menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span class="menu-btn__label">Menu</span>
+      <span class="menu-btn__icon"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <!-- ================= SLIDE-IN MENU (right → left) ================= -->
+  <aside id="menu" class="menu" aria-hidden="true">
+    <div class="menu__veil"></div>
+    <div class="menu__accent"></div>
+    <div class="menu__panel">
+      <span class="menu__title">Index</span>
+      <nav id="menuLinks" class="menu__links"></nav>
+      <div class="menu__foot">
+        <a id="menuMail" href="#"></a>
+        <span id="menuLoc"></span>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+
+    <!-- ================= HERO (parallax) ================= -->
+    <section class="hero" id="top">
+
+      <!-- far layer: outlined words -->
+      <div class="hero__words" aria-hidden="true">
+        <span class="hero__word px" data-depth="8"  data-speed=".55" style="left:-2vw; top:7vh">PYTHON</span>
+        <span class="hero__word px" data-depth="12" data-speed=".42" style="right:-5vw; top:34vh">AUTOMATION</span>
+        <span class="hero__word px" data-depth="16" data-speed=".30" style="left:6vw; bottom:-3vh">DATA</span>
+      </div>
+
+      <!-- near layer: floating skill chips -->
+      <div class="hero__chips" aria-hidden="true">
+        <span class="hero__chip px" data-depth="58" data-speed="-.22" style="left:13%; top:30%">Python</span>
+        <span class="hero__chip px" data-depth="76" data-speed="-.34" style="left:80%; top:26%">Azure</span>
+        <span class="hero__chip px" data-depth="64" data-speed="-.18" style="left:20%; top:70%">OpenCV</span>
+        <span class="hero__chip px" data-depth="84" data-speed="-.30" style="left:76%; top:66%">Pandas</span>
+        <span class="hero__chip px" data-depth="50" data-speed="-.14" style="left:50%; top:84%">SQL</span>
+      </div>
+
+      <!-- mid layer: headline -->
+      <div class="hero__center" id="heroCenter">
+        <small class="hero__label px" data-depth="22" data-speed=".20">A PYTHON, AUTOMATION &amp; DATA DEVELOPER</small>
+        <h1 class="hero__title">
+          <span class="hero__line px" data-depth="30" data-speed=".22"><em>Automating the</em></span>
+          <span class="hero__line px" data-depth="44" data-speed=".12"><b>unexpected</b></span>
+        </h1>
+        <a class="pill px" data-depth="30" data-speed=".08" href="#projects">View my work ↘</a>
+      </div>
+
+      <div class="hero__bottom">
+        <span class="hero__dot"></span>
+        <a class="pill pill--outline" href="#contact">Let's work together</a>
+        <span class="hero__copy">©2026</span>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about" id="about">
+      <div class="portrait" id="portrait">
+        <div class="portrait__outline"></div>
+        <div class="portrait__frame">
+          <img id="portraitImg" alt="Avinash Parab">
+        </div>
+        <span class="portrait__tag">Vadodara, IN</span>
+        <svg class="portrait__badge" viewBox="0 0 120 120" aria-hidden="true">
+          <defs><path id="badgePath" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+          <circle cx="60" cy="60" r="58" class="portrait__badge-bg"/>
+          <text><textPath href="#badgePath">PYTHON • AUTOMATION • DATA • </textPath></text>
+          <circle cx="60" cy="60" r="5" class="portrait__badge-dot"/>
+        </svg>
+      </div>
+
+      <div class="about__text">
+        <div class="label reveal">(About)</div>
+        <p class="big reveal" id="aboutBio"></p>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="block" id="skills">
+      <div class="label reveal">(Skills — move your cursor through them)</div>
+      <div class="skills__legend reveal" id="skillLegend"></div>
+      <div class="skills__field" id="skillField"></div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="block" id="education">
+      <div class="label reveal">(Education)</div>
+      <div id="educationList"></div>
+    </section>
+
+    <!-- ================= WORK JOURNEY ================= -->
+    <section class="block journey" id="journey">
+      <div class="label reveal">(Work Journey — hover a stop)</div>
+      <div class="journey__wrap" id="journeyWrap">
+        <svg class="journey__svg" id="journeySvg" aria-hidden="true">
+          <path class="journey__base"></path>
+          <path class="journey__progress"></path>
+          <g class="journey__nodes"></g>
+          <g class="journey__traveler"><circle class="journey__halo" r="16"></circle><circle r="7"></circle></g>
+        </svg>
+        <div class="journey__list" id="journeyList"></div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS (cards fold in WebGL) ================= -->
+    <section id="projects">
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="filters" id="projectFilters"></div>
+      <div class="project-grid" id="projectGrid"></div>
+    </section>
+
+    <!-- ================= CERTIFICATES ================= -->
+    <section class="block" id="certs">
+      <div class="label reveal">(Certifications &amp; Awards — hover to preview)</div>
+      <div id="certList"></div>
+    </section>
+
+    <!-- ================= SHOUT OUTS (horizontal fold) ================= -->
+    <section id="shout">
+      <div class="shout__scroll" id="shoutScroll">
+        <div class="shout__stage">
+          <div class="shout__head">
+            <span class="label">(Shout Outs)</span>
+            <h2 class="section-title section-title--left">What people say</h2>
+          </div>
+          <div class="shout__track" id="shoutTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee"><div id="marquee">Let's automate something — Let's automate something — Let's automate something — </div></div>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="label reveal">(Say hello)</div>
+      <p class="big reveal">We look forward<br>to hearing from you</p>
+      <a class="contact__mail" id="contactMail" href="#"></a>
+      <div class="contact__cols">
+        <div>Phone<br><a id="contactPhone" href="#"></a></div>
+        <div>Location<br><span id="contactLoc"></span></div>
+      </div>
+
+      <div class="social">
+        <div class="label">(Elsewhere — hover to preview)</div>
+        <div id="socialLinks"></div>
+      </div>
+
+      <footer class="footer">
+        <span>©2026 Avinash Parab</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Floating hover previews -->
+  <div id="certPreview" class="preview-cert"><img alt=""></div>
+  <div id="socialPreview" class="preview-social"></div>
+
+  <!-- Libraries -->
+  <script src="js/lib/three.min.js"></script>
+  <script src="js/lib/lenis.min.js"></script>
+
+  <!-- App (order matters) -->
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/webgl.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/counters.js"></script>
+  <script src="js/journey.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/certs.js"></script>
+  <script src="js/shout.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
