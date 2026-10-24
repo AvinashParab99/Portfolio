@@ -17,7 +17,7 @@ const CONFIG = {
     bio: `I'm <em>Avinash</em> — I turn repetitive work into <em>automation</em>.
           From Nissan's OTA backend at TCS to payment analytics at Bank of Baroda's
           subsidiary and data-quality automation at Numerator. Currently deepening
-          DSA &amp; System Design (<em>275+</em> LeetCode problems).`
+          DSA &amp; System Design (<em>280+</em> LeetCode problems).`
   },
 
   /* ---------- SOCIAL (hover preview ke liye) ---------- */
