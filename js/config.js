@@ -152,7 +152,18 @@ const CONFIG = {
      image: real screenshot (chat / LinkedIn recommendation). Sab same size ke cards me aayenge.
      image na ho to quote/name wala placeholder card dikhega. */
   shouts: [
-    { image: 'assets/shouts/s1.jpg', quote: 'Add a real testimonial from a manager here. One or two lines about your impact.', name: 'Name Surname', role: 'Manager, Numerator' }
+    { image: 'assets/shouts/s1.jpg' },
+     { image: 'assets/shouts/s2.jpeg' },
+     { image: 'assets/shouts/s3.jpeg' },
+     { image: 'assets/shouts/s4.jpeg' },
+      { image: 'assets/shouts/s5.jpeg' },
+     { image: 'assets/shouts/s6.jpeg' },
+     { image: 'assets/shouts/s7.jpeg' },
+     { image: 'assets/shouts/s8.jpeg' },
+      { image: 'assets/shouts/s9.jpeg' },
+     { image: 'assets/shouts/s10.jpeg' },
+     { image: 'assets/shouts/s11.jpeg' },
+     { image: 'assets/shouts/s12.jpeg' }
 
   ],
 
