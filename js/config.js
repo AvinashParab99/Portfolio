@@ -152,19 +152,19 @@ const CONFIG = {
      image: real screenshot (chat / LinkedIn recommendation). Sab same size ke cards me aayenge.
      image na ho to quote/name wala placeholder card dikhega. */
   shouts: [
-     { image: 'assets/shouts/s1.jpg' },
-    { image: 'assets/shouts/s2.jpg'},
-     { image: 'assets/shouts/s3.jpg' },
-    { image: 'assets/shouts/s4.jpg'},
-     { image: 'assets/shouts/s5.jpg' },
-    { image: 'assets/shouts/s6.jpg'},
-     { image: 'assets/shouts/s7.jpg' },
-    { image: 'assets/shouts/s8.jpg'},
-      { image: 'assets/shouts/s9.jpg' },
-    { image: 'assets/shouts/s10.jpg'},
-     { image: 'assets/shouts/s11.jpg' },
-    { image: 'assets/shouts/s12.jpg'}
-
+    { image: 'assets/shouts/s1.jpg', quote: 'Add a real testimonial from a manager here. One or two lines about your impact.', name: 'Name Surname', role: 'Manager, Numerator' },
+    { image: 'assets/shouts/s2.jpg', quote: 'Add a real testimonial from a colleague here. Mention reliability and speed.',    name: 'Name Surname', role: 'Colleague, Baroda Global' },
+    { image: 'assets/shouts/s3.jpg', quote: 'Add a real testimonial from a teammate here. Collaboration and quality.',          name: 'Name Surname', role: 'Teammate, TCS' },
+    { image: 'assets/shouts/s4.jpg', quote: 'Add a real testimonial from a client or stakeholder here.',                       name: 'Name Surname', role: 'Stakeholder' },
+    { image: 'assets/shouts/s5.jpg', quote: 'Add a real testimonial from a mentor or friend here.',                            name: 'Name Surname', role: 'Mentor' },
+    { image: 'assets/shouts/s6.jpg', quote: 'Add a real testimonial from a manager here. One or two lines about your impact.', name: 'Name Surname', role: 'Manager, Numerator' },
+    { image: 'assets/shouts/s7.jpg', quote: 'Add a real testimonial from a colleague here. Mention reliability and speed.',    name: 'Name Surname', role: 'Colleague, Baroda Global' },
+    { image: 'assets/shouts/s8.jpg', quote: 'Add a real testimonial from a teammate here. Collaboration and quality.',          name: 'Name Surname', role: 'Teammate, TCS' },
+    { image: 'assets/shouts/s9.jpg', quote: 'Add a real testimonial from a client or stakeholder here.',                       name: 'Name Surname', role: 'Stakeholder' },
+    { image: 'assets/shouts/s10.jpg', quote: 'Add a real testimonial from a mentor or friend here.',                            name: 'Name Surname', role: 'Mentor' },
+    { image: 'assets/shouts/s11.jpg', quote: 'Add a real testimonial from a manager here. One or two lines about your impact.', name: 'Name Surname', role: 'Manager, Numerator' },
+    { image: 'assets/shouts/s12.jpg', quote: 'Add a real testimonial from a colleague here. Mention reliability and speed.',    name: 'Name Surname', role: 'Colleague, Baroda Global' }
+     
   ],
 
   /* ---------- LOOK & FEEL ---------- */
