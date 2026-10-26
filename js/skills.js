@@ -14,7 +14,22 @@
     const el = document.createElement('div');
     el.className = 'skill-chip';
     el.dataset.cat = skill.cat;
-    el.innerHTML = `<span>${skill.name}</span>`;
+    el.dataset.name = skill.name;                      // hover tooltip ke liye
+
+    if (skill.logo) {
+      // logo diya hai -> naam ki jagah logo dikhao
+      el.classList.add('has-logo');
+      el.innerHTML = `<span><img src="${skill.logo}" alt="${skill.name}" width="30" height="30"></span>`;
+
+      // logo load na ho to wapas naam dikha do
+      el.querySelector('img').onerror = () => {
+        el.classList.remove('has-logo');
+        el.innerHTML = `<span>${skill.name}</span>`;
+        measure();
+      };
+    } else {
+      el.innerHTML = `<span>${skill.name}</span>`;
+    }
     field.appendChild(el);
     return { el, cat: skill.cat, x: 0, y: 0, vx: 0, vy: 0, w: 0, h: 0 };
   });
@@ -82,6 +97,7 @@
       if (c.y < 0)           { c.y = 0;           c.vy =  Math.abs(c.vy); }
       if (c.y > H - c.h)     { c.y = H - c.h;     c.vy = -Math.abs(c.vy); }
     });
+    
 
     // chips ek dusre par chadhe nahi (rectangle overlap -> halka dhakka)
     for (let i = 0; i < chips.length; i++) {
