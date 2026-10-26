@@ -12,7 +12,7 @@ const CONFIG = {
     email:    'avinashparab170799@gmail.com',
     phone:    '+91-7990985830',
     location: 'Vadodara, India',
-    photo:         'assets/photo.jpg',   // apni photo (jpg/png) is naam se rakho
+    photo:         'assets/profile.jpg',   // apni photo (jpg/png) is naam se rakho
     photoFallback: 'assets/photo.svg',   // photo na mile to ye dikhega
     resume:        'assets/Avinash_Parab_Resume.pdf',
     bio: `I'm <em>Avinash</em> — I turn repetitive work into <em>automation</em>.
@@ -151,10 +151,10 @@ skills: [
   /* ---------- CERTIFICATES & AWARDS ----------
      image: jpg / png / svg — sab ek hi box me poori dikhengi (crop nahi hogi). */
   certificates: [
-    { title: 'Numerator Star Performer Award',  year: '2026', issuer: 'For automation (May)',      image: 'assets/certs/c1.svg' },
-    { title: 'Numerator Spot Award',            year: '2025', issuer: 'For automation (December)', image: 'assets/certs/c2.svg' },
-    { title: 'Azure Fundamentals (AZ-900)',     year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/c3.svg' },
-    { title: 'Azure Data Fundamentals (DP-900)',year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/c4.svg' }
+    { title: 'Numerator Star Performer Award',  year: '2026', issuer: 'For automation (May)',      image: 'assets/certs/star.jpg' },
+    { title: 'Numerator Spot Award',            year: '2025', issuer: 'For automation (December)', image: 'assets/certs/spot.png' },
+    { title: 'Azure Fundamentals (AZ-900)',     year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/az900.png' },
+    { title: 'Azure Data Fundamentals (DP-900)',year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/dp900.png' }
   ],
 
   /* ---------- SHOUT OUTS ----------
