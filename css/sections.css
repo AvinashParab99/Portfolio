@@ -151,7 +151,16 @@
 .skill-chip[data-cat="core"]       span { background: #f3d9dc; }
 .skill-chip[data-cat="learning"]   span { background: transparent; border: 1px dashed var(--ink); }
 
-
+/* logo wale chips: sirf logo (white tile), naam hover par tooltip me */
+.skill-chip.has-logo[data-cat] span { padding: .8rem; border-radius: 16px; background: #fff; border: 1px solid #0002; }
+.skill-chip img { display: block; width: 30px; height: 30px; object-fit: contain; }
+.skill-chip.has-logo::after {
+  content: attr(data-name); position: absolute; left: 50%; top: 100%; transform: translate(-50%, 6px);
+  padding: .25rem .65rem; border-radius: 99px; background: var(--ink); color: #fff;
+  font-size: .7rem; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .25s;
+}
+.skill-chip.has-logo:hover::after { opacity: 1; }
+.skill-chip.has-logo:hover { z-index: 5; }
 
 /* ==========================================================================
    3b. EDUCATION (card + CGPA ring + timeline)
