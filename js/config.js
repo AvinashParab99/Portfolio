@@ -2,7 +2,8 @@
    CONFIG — yahin se apna saara content badlo (text, links, images).
    Koi bhi image: bas file `assets/...` folder me rakho aur neeche ka path likho.
    ============================================================================ */
-
+const SI  = slug => `https://cdn.simpleicons.org/${slug}`;
+const DEV = name => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${name}/${name}-original.svg`;
 const CONFIG = {
 
   /* ---------- PROFILE ---------- */
@@ -11,20 +12,20 @@ const CONFIG = {
     email:    'avinashparab170799@gmail.com',
     phone:    '+91-7990985830',
     location: 'Vadodara, India',
-    photo:         'assets/profile.jpg',   // apni photo (jpg/png) is naam se rakho
+    photo:         'assets/photo.jpg',   // apni photo (jpg/png) is naam se rakho
     photoFallback: 'assets/photo.svg',   // photo na mile to ye dikhega
-    resume:        'assets/Avinash_Parab_Resume_2026.pdf',
+    resume:        'assets/Avinash_Parab_Resume.pdf',
     bio: `I'm <em>Avinash</em> — I turn repetitive work into <em>automation</em>.
           From Nissan's OTA backend at TCS to payment analytics at Bank of Baroda's
           subsidiary and data-quality automation at Numerator. Currently deepening
-          DSA &amp; System Design (<em>280+</em> LeetCode problems).`
+          DSA &amp; System Design (<em>275+</em> LeetCode problems).`
   },
 
   /* ---------- SOCIAL (hover preview ke liye) ---------- */
   social: {
-    linkedin: 'https://www.linkedin.com/in/avinash-parab-6a76a622a/',   // poora URL
-    github:   'AvinashParab99',                  // sirf username
-    leetcode: 'Avinash_Parab'                 // sirf username
+    linkedin: 'https://www.linkedin.com/in/your-id',   // poora URL
+    github:   'your-github-username',                  // sirf username
+    leetcode: 'your-leetcode-username'                 // sirf username
   },
 
   /* ---------- SKILLS ---------- */
@@ -36,30 +37,38 @@ const CONFIG = {
     core:       'Core Concepts',
     learning:   'Learning'
   },
-  skills: [
-    { name: 'Python', cat: 'languages' },  { name: 'C#', cat: 'languages' },
-    { name: 'SQL', cat: 'languages' },     { name: 'HTML', cat: 'languages' },
-    { name: 'CSS', cat: 'languages' },
+skills: [
+  { name: 'Python',   cat: 'languages', logo: SI('python') },
+  { name: 'C#',       cat: 'languages', logo: 'assets/logos/csharp.png' },
+  { name: 'SQL',      cat: 'languages' },
+  { name: 'HTML',     cat: 'languages', logo: DEV('html5') },
+  { name: 'CSS',      cat: 'languages', logo: DEV('css3') },
 
-    { name: 'Flask', cat: 'frameworks' },  { name: 'Pandas', cat: 'frameworks' },
-    { name: 'NumPy', cat: 'frameworks' },  { name: 'OpenCV', cat: 'frameworks' },
-    { name: 'GSAP', cat: 'frameworks' },
+  { name: 'Flask',    cat: 'frameworks', logo: SI('flask') },
+  { name: 'Pandas',   cat: 'frameworks', logo: SI('pandas') },
+  { name: 'NumPy',    cat: 'frameworks', logo: SI('numpy') },
+  { name: 'OpenCV',   cat: 'frameworks', logo: SI('opencv') },
+  { name: 'GSAP',     cat: 'frameworks', logo: SI('greensock') },
 
-    { name: 'PostgreSQL', cat: 'databases' }, { name: 'MySQL', cat: 'databases' },
+  { name: 'PostgreSQL', cat: 'databases', logo: SI('postgresql') },
+  { name: 'MySQL',      cat: 'databases', logo: SI('mysql') },
 
-    { name: 'Azure', cat: 'cloud' },       { name: 'Git', cat: 'cloud' },
-    { name: 'GitHub', cat: 'cloud' },      { name: 'Power BI', cat: 'cloud' },
-    { name: 'Excel', cat: 'cloud' },       { name: 'Google Sheets', cat: 'cloud' },
-    { name: 'Apps Script', cat: 'cloud' }, { name: 'Docker', cat: 'cloud' },
+  { name: 'Azure',    cat: 'cloud', logo: DEV('azure') },
+  { name: 'Git',      cat: 'cloud', logo: SI('git') },
+  { name: 'GitHub',   cat: 'cloud', logo: SI('github') },
+  { name: 'Power BI', cat: 'cloud', logo: 'assets/logos/powerbi.png' },
+  { name: 'Excel',    cat: 'cloud', logo: 'assets/logos/excel.png' },
+  { name: 'Google Sheets', cat: 'cloud', logo: SI('googlesheets') },
+  { name: 'Apps Script',   cat: 'cloud', logo: SI('googleappsscript') },
 
-    { name: 'Automation', cat: 'core' },   { name: 'Backend Development', cat: 'core' },
-    { name: 'REST APIs', cat: 'core' },    { name: 'Scalable Systems', cat: 'core' },
-    { name: 'Data Processing', cat: 'core' }, { name: 'Debugging', cat: 'core' },
-    { name: 'Process Optimization', cat: 'core' },
+  { name: 'Automation', cat: 'core' },  { name: 'Backend Development', cat: 'core' },
+  { name: 'REST APIs',  cat: 'core' },  { name: 'Scalable Systems', cat: 'core' },
+  { name: 'Data Processing', cat: 'core' }, { name: 'Debugging', cat: 'core' },
+  { name: 'Process Optimization', cat: 'core' },
 
-    { name: 'DSA', cat: 'learning' },      { name: 'System Design', cat: 'learning' },
-    { name: 'LeetCode 275+', cat: 'learning' }
-  ],
+  { name: 'DSA', cat: 'learning' },  { name: 'System Design', cat: 'learning' },
+  { name: 'LeetCode 280+', cat: 'learning', logo: SI('leetcode') }
+],
 
   /* ---------- EDUCATION ----------
      logo: college ka logo (assets/logos/ me rakho) — na mile to initials dikhenge.
@@ -98,7 +107,7 @@ const CONFIG = {
       period:  'Apr 2024 — Aug 2025',
       role:    'Senior Executive',
       company: 'Baroda Global Shared Service Ltd · Vadodara',
-      logo: 'assets/logos/baroda.png', initials: 'BG', color: '#d9534f',
+      logo: 'assets/logos/BGSS.png', initials: 'BG', color: '#d9534f',
       summary: 'Payment data analysis and automation for a Bank of Baroda subsidiary.',
       skills:  ['Python', 'Pandas', 'NumPy', 'Excel', 'Razorpay', 'CCAvenue', 'Airpay'],
       wins: [
@@ -113,7 +122,7 @@ const CONFIG = {
       period:  'Aug 2025 — Now',
       role:    'Custom Group Associate – Data Quality & Taxonomy',
       company: 'Numerator · India (Remote)',
-      logo: 'assets/logos/numerator.png', initials: 'N', color: '#0f766e',
+      logo: 'assets/logos/Numerator.png', initials: 'N', color: '#0f766e',
       summary: 'Product taxonomy, attribute validation and workflow automation.',
       skills:  ['Python', 'Google Apps Script', 'Slack automation', 'Dashboards', 'Data QC'],
       wins: [
@@ -142,10 +151,10 @@ const CONFIG = {
   /* ---------- CERTIFICATES & AWARDS ----------
      image: jpg / png / svg — sab ek hi box me poori dikhengi (crop nahi hogi). */
   certificates: [
-    { title: 'Numerator Star Performer Award',  year: '2026', issuer: 'For automation (May)',      image: 'assets/certs/star.jpg' },
-    { title: 'Numerator Spot Award',            year: '2025', issuer: 'For automation (December)', image: 'assets/certs/spot.png' },
-    { title: 'Azure Fundamentals (AZ-900)',     year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/az900.png' },
-    { title: 'Azure Data Fundamentals (DP-900)',year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/dp900.png' }
+    { title: 'Numerator Star Performer Award',  year: '2026', issuer: 'For automation (May)',      image: 'assets/certs/c1.svg' },
+    { title: 'Numerator Spot Award',            year: '2025', issuer: 'For automation (December)', image: 'assets/certs/c2.svg' },
+    { title: 'Azure Fundamentals (AZ-900)',     year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/c3.svg' },
+    { title: 'Azure Data Fundamentals (DP-900)',year: '2022', issuer: 'Microsoft Certified',       image: 'assets/certs/c4.svg' }
   ],
 
   /* ---------- SHOUT OUTS ----------
