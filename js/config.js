@@ -24,8 +24,8 @@ const CONFIG = {
   /* ---------- SOCIAL (hover preview ke liye) ---------- */
   social: {
     linkedin: 'https://www.linkedin.com/in/your-id',   // poora URL
-    github:   'your-github-username',                  // sirf username
-    leetcode: 'your-leetcode-username'                 // sirf username
+    github:   'AvinashParab99',                  // sirf username
+    leetcode: 'Avinash_Parab'                 // sirf username
   },
 
   /* ---------- SKILLS ---------- */
